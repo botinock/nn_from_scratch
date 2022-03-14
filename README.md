@@ -20,7 +20,7 @@ model = Sequential(
         Linear(X_train.shape[1], 1, weights_init=xavier_normal),
         Sigmoid()
     ],
-    opt=SGD(lr=params['lr']))
+    opt=SGD(lr=1e-3))
 loss_fn = BCE()
 
 for data, target in train_dataset:
